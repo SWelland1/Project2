@@ -13,7 +13,7 @@ let game = {
 
 $(document). ready(function() {
  //Display game page also start new game when button clicked
- $('#start-game-button').click(function() {
+    $('#start-game-button').click(function() {
     $('#start-page').addClass('hide');
     $('#game-page').removeClass('hide');
     NewGame();
@@ -43,8 +43,7 @@ $('#play-again-button').click(function() {
 });
 
 /**Loop for main game, when Start Game is pressed
- * and after Play Again or Reset Game buttons are pressed
-*/
+ * and after Play Again or Reset Game buttons are pressed*/
 function newGame() {
     game.cards=[];
     game.round=0;
@@ -54,6 +53,7 @@ function newGame() {
 $('#results-box').text('Click Higher or Lower to Submit your next Move!');
 $('#higher-button').removeAttr("disabled","disabled").addClass('game-button-hover');
 $('#lower-button').removeAttr("diabled","disabled");
+
 //all values of the cards set to the value of ?
 for(let i=1;i<5;i++) {
     $('#card-${i}`).text("?").css('background-color', #78ceeb');
@@ -102,7 +102,7 @@ switch(game.round) {
  * Checks if user guessed correctly */
 function checkGuess(userGuess){
 
-    //Is the game active or inactive, allows user to guess or not
+//Is the game active or inactive, allows user to guess or not
     if(game.gameStatus==='active'){
 
 //code changes depending on higher or lower guess is made
@@ -134,30 +134,43 @@ user cannot make anymore guesses*/
     $('#higher-button').attr('disabled','disabled').remoceClass('game-button-hover');
     $('#lower-button').attr('disabled','disabled').removeClass('game-button-hover');
 }
+} else if (userGuess==='lower'){
+    
+//Current card checked if less than previous User is either correct or incorect
+    if(game.currentCard<game.previousCard) {
+
+//Round number checked either player moves to next round or game is completed
+    if(game.round<4){
+
+//Round number increases and card changes to green informs User guess is correct
+    $('#results-box').text("Thats is Correct, Round ${game.round} Complete, move onto the next round!");
+    $(`#card-${game.round}`).text(game.currentCard).css('background-color', 'limegreen');
+    increaseRound();
+{ else if(game.round===4) {
+
+//User taken to Result Page and Congratulated!
+    $('#results-page').remoceClass('hide');
+    $('#game-page').addClass('hide');
+} else {
+    $('#results-box').text('Invalid Round Press Game Reset');
+}
 } else {
 
+//Card changes to red informing the user the guess was incorrect, status of game changed to inactive 
+// user cannot make anymore guesses
+    $('#results-box').text('Unlucky that is incorrect! Press 'Game Restart' to play again!');
+    $(`#card-${game.round}`).text(game.currentCard).css('background-color', 'red');
+    game.gameStatus='inactive';
+    $('#higher-button').attr('disabled','disabled').removeClass('game-button-hover');
+    $('#lower-button').attr('disabled','disabled').removeClass('game-button-hover');
 }
-
-}
-
-
-} 
-
-} 
-
-}
-}
-})
-}
-}
-}
-}
-
-
-
-
-
-
-
-
-
+    } else {
+        $('#results-box').text('Make your guess Higher or Lower!');
+    } else {
+        $('#results-box').text(`Press Game Reset to Play Again`)
+    }
+    }
+    }    
+    }
+    }
+    }
