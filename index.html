@@ -73,7 +73,106 @@ data-bs-target="#how-to-play-modal">
 <div class="container-fluid">
     <div class="row-justify-content-center text-centre">
 
+<!--No. 1 Card-->
+<div class="card-col-6 col-md-2 d-flex justify-content-centre">
+    <div id="card-0" class="inner-card d-flex justify-content-centre align-items-centre">
+</div>
+</div>
 
+<!--No. 2 Card-->
+<div class="card-col-6 col-md-2 d-flex justify-content-centre">
+    <div id="card-1" class="inner-card d-flex justify-content-centre align-items-centre">
+</div>
+</div>
+
+<!--No. 3 Card-->
+<div class="card-col-6 col-md-2 d-flex justify-content-centre">
+    <div id="card-2" class="inner-card d-flex justify-content-centre align-items-centre">
+</div>
+</div>
+
+<!--No. 4 Card-->
+<div class="card-col-6 col-md-2 d-flex justify-content-centre">
+    <div id="card-3" class="inner-card d-flex justify-content-centre align-items-centre">
+</div>
+</div>
+
+<!--No. 5 Card-->
+<div class="card-col-6 col-md-2 d-flex justify-content-centre">
+    <div id="card-4" class="inner-card d-flex justify-content-centre align-items-centre">
+</div>
+</div>
+
+<!--No. 6 Card-->
+<div class="card-col-6 col-md-2 d-flex justify-content-centre">
+    <div id="card-5" class="inner-card d-flex justify-content-centre align-items-centre">
+</div>
+</div>
+
+<!--Row with Buttons, Higher or Lower-->
+<div class="row">
+
+<!--Button - Higher-->
+<div class="col justify-content-around">
+    <button id="higher-button" class="game-button game-button-hover">
+        Higher
+    </button>
+</div>
+
+<!--Button - Lower-->
+<div class="col justify-content-around">
+    <button id="lower-button" class="game-button game-button-hover">
+        Lower
+    </button>
+</div>
+
+<!--Button 'Reset' to activate Modal-->
+<button id="reset-game-button" class="game-button game-button-hover" data-bs-toggle="modal"
+data-bs-target="#reset-game-modal">
+</button>
+
+<!--Modal-->
+<aside class="modal fade" id="reset-game-modal" tabindex="-1" aria-labelledby="reset-game-button"
+aria-hidden="true">
+<div class="modal-dialog">
+    <div class="modal-content">
+
+<!--Header - Modal-->
+<div class="modal-header">
+
+<!--Title - Modal-->
+<h3 class="modal-title">
+    Are You Sure?
+</h3>
+
+<!--Modal Cross Button-->
+<button type="button" class="btn-close" data-bs-dismiss="modal" 
+aria-label="Close"></button>
+</div>
+
+<!--Message - Modal-->
+<div class="modal-body">
+    Previous progression will be lost
+</div> 
+<div class="modal-footer">
+
+<!--Button Close Modal-->
+<button data-bs-dismiss="modal" class="game-button game-button-hover">
+    Close
+</button>
+
+<!--Button 'Modal Reset'-->
+<button id="modal-reset-game-button" data-bs-dismiss="modal"
+class="game-button game-button-hover">
+Reset Game
+</button>
+
+</div>
+
+</div>
+    </div>
+</div>
+</aside>
 </section>
 
 
