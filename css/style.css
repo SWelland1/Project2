@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css2?family=New+Amsterdam&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+/* Text Styling and Layout */
+body {
+    background-color: black;
+    color: orange;
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+main {
+    flex: 1 0 auto;
+}
+
+
+section {
+    margin: 20px;
+}
+
+h1 {
+    margin: 20px;
+    font-family: "New Amsterdam", sans-serif;
+    font-size: 4rem;
+    color: #F39237;
+    text-shadow: 2px 2px black;
+}
+
+h2 {
+    font-family: Nunito, sans-serif;
+    color: black;
+    text-transform: uppercase;
+}
+
+p, li {
+    color: grey;
+}
+
+#results-box,
+#round-box,
+#scale-box {
+    font-family: Nunito, sans-serif;
+    font-size: 1.25rem;
+    margin: 0 auto;
+}
+
+a {
+    font-family: Nunito, sans-serif;
+    font-size: 1.25rem;
+    margin: 20px auto;
+    text-decoration: none;
+    color: black;
+}
+
+a:hover {
+    color: orange;
+    text-shadow: 2px 2px black;
+}
+
+/* Navigation */
+.hide {
+    display: none !important;
+}
+
+/* Page 'Game' */
+.card {
+    border: none;
+    background-color: black;
+    height: 150px;
+    font-size: 40px;
+    padding: 10px;
+}
+
+.inner-card {
+    border: 5px solid red;
+    background-color: white;
+    height: 80%;
+    border-radius: 10px;
+}
+
+#results-box {
+    min-height: 50px;
+}
+
+/* Modal */
+.modal-title {
+    font-size: 2rem;
+    color: black;
+}
+
+.modal-body {
+    margin: 15px 0px;
+    color: black;
+}
+
+/* Buttons */
+.game-button {
+    margin: 20px;
+    padding: 0 20px;
+    font-family: "New Amsterdam", sans-serif;
+    font-size: 1.75rem;
+    border-radius: 5px;
+    min-height: 80px;
+    min-width: 10rem;
+    background-color: #F39237;
+}
+
+.game-button-hover:hover {
+    color: #F39237;
+    background-color: black;
+}
+
+#higher-button,
+#lower-button {
+    margin: 0;
+    padding: 0;
+    width: 25%;
+    min-width: 100px;
+    max-width: 150px;
+}
