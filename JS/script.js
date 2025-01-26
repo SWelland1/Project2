@@ -57,7 +57,7 @@ function newGame() {
     for (let i = 1; i < 5; i++) {
         $(`#card-${i}`).text("?").css('background-color', '#78ceeb');
     }
-    //generate 5 random numbers between 0 and 15, avoiding duplicates, adding them to the cards array 
+    //generate 5 random numbers between 0 and 20, avoiding duplicates, adding them to the cards array 
     while (game.cards.length < 5) {
         let card = ((Math.floor(Math.random() * 16)));
         if (!game.cards.includes(card)) {

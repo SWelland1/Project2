@@ -38,11 +38,17 @@ h2 {
 p,
 li,
 #results-box,
-#round-box,
+#round-box, {
+    font-family: Nunito, sans-serif;
+    font-size: 1.25rem;
+    margin: 0 auto;
+}
+
 #scale-box {
     font-family: Nunito, sans-serif;
     font-size: 1.25rem;
     margin: 0 auto;
+    color: azure;
 }
 
 a {
