@@ -1,131 +1,262 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# Higher or Lower
 
-Welcome Sarah Welland,
+Higher or Lower is an interactive game that allows Users to submit a guess for each of the 5 Cards displayed. The User must guess if the Next Card will be 'Higher or Lower in number than the current. If the User guesses all 5 Cards correctly they win the game. If at anypoint a guess is incorrect the game ends. It then must be started from Card 1.
 
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. It's perfectly ok to use this template as the basis for your project submissions.
+![Site On Different Devices](/css/images/ReadMe%20and%20Testing/Am%20I%20responsive%20devices.png)
 
-You can safely delete this README.md file or change it for your own project. Please do read it at least once, though! It contains some important information about Gitpod and the extensions we use. Some of this information has been updated since the video content was created. The last update to this file was: **June 18, 2024**
+[Link to Github Page](https://swelland1.github.io/Silver-Camper/index.html) 
 
-## Gitpod Reminders
+# Contents
+* [User Experience](#user-experience)
 
-To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
+* [User Stories](#user-stories)
+  * [Design](#design)
 
-`python3 -m http.server`
+* [Colour Scheme](#colour-scheme)
+  * [Typography](#typography)
+  * [Imagery](#imagery)
+  * [Wireframes](#wireframes)
 
-A blue button should appear to click: _Make Public_,
+* [Features](#features)
+  * [All Pages Have](#all-pages-have)
 
-Another blue button should appear to click: _Open Browser_.
+* [Accessability](#accessability)
+* [Technology Used](#technology-used)
+  *[Language](#language)
 
-To run a backend Python file, type `python3 app.py` if your Python file is named `app.py`, of course.
+* [Frameworks](#framework)
 
-A blue button should appear to click: _Make Public_,
+* [Deployment and Local Development](#deployment-and-local-development)
+  * [Deployment](#deployment)
 
-Another blue button should appear to click: _Open Browser_.
+* [Local Development](#local-development)
+  * [How to Fork](#how-to-fork)
+  * [How to Clone](#how-to-clone)
 
-By Default, Gitpod gives you superuser security privileges. Therefore, you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
+* [Testing](/Testing.md)
+  * [W3C Vaildator](#w3c-vaildator)
+  * [Solved Bugs](#solved-bugs)
 
-To log into the Heroku toolbelt CLI:
+* [Testing User Stories](#testing-user-stories)
+  * [First Time Users](#first-time-users)
+  * [Returning Visitors](#returning-visitors)
+  * [Lighthouse](#lighthouse)
 
-1. Log in to your Heroku account and go to *Account Settings* in the menu under your avatar.
-2. Scroll down to the *API Key* and click *Reveal*
-3. Copy the key
-4. In Gitpod, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
+* [Full Testing](#full-testing)
+  * [Device Testing](#device-testing)
+  * [Links](#links)
 
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you, so do not share it. If you accidentally make it public, you can create a new one with _Regenerate API Key_.
+* [Credit](#credit)
+  
 
-### Connecting your Mongo database
+## User Experience
 
-- **Connect to Mongo CLI on a IDE**
-- navigate to your MongoDB Clusters Sandbox
-- click **"Connect"** button
-- select **"Connect with the MongoDB shell"**
-- select **"I have the mongo shell installed"**
-- choose **mongosh (2.0 or later)** for : **"Select your mongo shell version"**
-- choose option: **"Run your connection string in your command line"**
-- in the terminal, paste the copied code `mongo "mongodb+srv://<CLUSTER-NAME>.mongodb.net/<DBname>" --apiVersion 1 --username <USERNAME>`
-  - replace all `<angle-bracket>` keys with your own data
-- enter password _(will not echo **\*\*\*\*** on screen)_
+**Initial Discussion**
+Silver Camper an Online Site to find Camping Sites around the UK.
 
-------
+**Key Information**
+* Gallery of Images for available Camping Sites
+* Contact Us for more information
 
-## Release History
+## User Stories
 
-We continually tweak and adjust this template to help give you the best experience. Here is the version history:
+**Client Goals** 
+* View the site on a wide range of devices
+* Find sample images of available Camping Sites
+* To be able to Contact Silver Camper for more information
 
-**June 18, 2024,** Add Mongo back into template
+**First Time Visit**
+* Sample Camping Sites
+* Navigate the site easily
+* Find Social Media pages
 
-**June 14, 2024,** Temporarily remove Mongo until the key issue is resolved
+**Returning Visitors**
+* Easily contact Silver Camper for more information
 
-**May 28 2024:** Fix Mongo and Links installs
+# Design
 
-**April 26 2024:** Update node version to 16
+# Colour Scheme
 
-**September 20 2023:** Update Python version to 3.9.17.
+![Coolars Pallet Chart](/css/images/ReadMe%20and%20Testing/coolars%20pallet.png)
 
-**September 1 2021:** Remove `PGHOSTADDR` environment variable.
+Colour Pallet used was White, Black and Red. Colour Pallet created using Coolors Website.
 
-**July 19 2021:** Remove `font_fix` script now that the terminal font issue is fixed.
+# Typography
+Google Fonts Used: Lato and Oswald
 
-**July 2 2021:** Remove extensions that are not available in Open VSX.
+![Oswald Font](/css/images/ReadMe%20and%20Testing/oswald.png) ![Lato Font](/css/images/ReadMe%20and%20Testing/lato.png)
 
-**June 30 2021:** Combined the P4 and P5 templates into one file, added the uptime script. See the FAQ at the end of this file.
+# Imagery 
 
-**June 10 2021:** Added: `font_fix` script and alias to fix the Terminal font issue
+Images were taken from Unsplash with permission of the owners. 
 
-**May 10 2021:** Added `heroku_config` script to allow Heroku API key to be stored as an environment variable.
+# Wireframes
 
-**April 7 2021:** Upgraded the template for VS Code instead of Theia.
+[Homepage Wireframe](/css/images/ReadMe%20and%20Testing/Homepage%20Wireframe.png)
+ 
+[Gallery Wireframe](/css/images/ReadMe%20and%20Testing/Gallery%20Wireframe.png)
+ 
+[Contact Us Wireframe](/css/images/ReadMe%20and%20Testing/Contact%20Us%20Wireframe.png)
 
-**October 21 2020:** Versions of the HTMLHint, Prettier, Bootstrap4 CDN and Auto Close extensions updated. The Python extension needs to stay the same version for now.
+[Submit Wireframe](/css/images/ReadMe%20and%20Testing/Submit%20Wireframe.png)
 
-**October 08 2020:** Additional large Gitpod files (`core.mongo*` and `core.python*`) are now hidden in the Explorer, and have been added to the `.gitignore` by default.
+# Features
 
-**September 22 2020:** Gitpod occasionally creates large `core.Microsoft` files. These are now hidden in the Explorer. A `.gitignore` file has been created to make sure these files will not be committed, along with other common files.
+The website has three accessible pages form the Navigation Bar they are, Home, Gallery and Contact Us.
 
-**April 16 2020:** The template now automatically installs MySQL instead of relying on the Gitpod MySQL image. The message about a Python linter not being installed has been dealt with, and the set-up files are now hidden in the Gitpod file explorer.
+# All Pages Have
+* Navigation Bar which allows user to navigate through the site. For user experience on different devices
+  a hidden media query has been added, allowing a more straight forward navigation on smaller devices.
+* Footer this contains social media links with icons for Instagram, Twitter and Facebook.
 
-**April 13 2020:** Added the _Prettier_ code beautifier extension instead of the code formatter built-in to Gitpod.
+**Homepage**
+* Hero Image which is the full width of the page.
 
-**February 2020:** The initialisation files now _do not_ auto-delete. They will remain in your project. You can safely ignore them. They just make sure that your workspace is configured correctly each time you open it. It will also prevent the Gitpod configuration popup from appearing.
+**Gallery**
+* This pages takes users to a page of images.
 
-**December 2019:** Added Eventyret's Bootstrap 4 extension. Type `!bscdn` in a HTML file to add the Bootstrap boilerplate. Check out the <a href="https://github.com/Eventyret/vscode-bcdn" target="_blank">README.md file at the official repo</a> for more options.
+**Contact Us**
+* Hero Image which is the full width of the page. 
+* Gives information for the user to contact us further.
+* A form contains fields for First Name, Last Name, Email Address and a message that may want to be left.
+The form is submitted with a submit button.
 
-------
+## Accessability
+I have made the site as accessible as possible by using
+* HTML
+* Alt attributes on Images
+* The Colour Pallet is simple
 
-## FAQ about the uptime script
+## Technology Used
 
-**Why have you added this script?**
+# Language
+HTML and CSS used
 
-It will help us to calculate how many running workspaces there are at any one time, which greatly helps us with cost and capacity planning. It will help us decide on the future direction of our cloud-based IDE strategy.
+## Framework
+* Wireframe - Balsamiq
+* Git - Version Control
+* GitHub - Store and Save Files
+* Bootstrap Version 5.3.3 was used for the framework of the website, Code for the Navigation Bar.
+* Google Fonts were used throughout the website.
+* FontAwesome was used for the icons on pages.
+* Google Dev Tools - Test and Troubleshoot also used to test responsiveness and styling.
+* Am I Responsive used for website images on a range of devices.
 
-**How will this affect me?**
+# Deployment and Local Development
 
-For everyday usage of Gitpod, it doesn’t have any effect at all. The script only captures the following data:
+# Deployment
+Github Pages was used to deploy the live website. The instructions to achieve this are below:
 
-- An ID that is randomly generated each time the workspace is started.
-- The current date and time
-- The workspace status of “started” or “running”, which is sent every 5 minutes.
+Log in (or sign up) to Github.
+Find the repository for this project, Silver Camper.
+Click on the Settings link.
+Click on the Pages link in the left hand side navigation bar.
+In the Source section, choose main from the drop down select branch menu. Select Root from the drop down select folder menu.
+Click Save. Your live Github Pages site is now deployed at the URL shown.
 
-It is not possible for us or anyone else to trace the random ID back to an individual, and no personal data is being captured. It will not slow down the workspace or affect your work.
+## Local Development
+# How to Fork
+To fork the Silver Camper repository:
 
-**So….?**
+Log in (or sign up) to Github.
+Go to the repository for this project, kera-cudmore/Bully-Book-Club.
+Click the Fork button in the top right corner.
 
-We want to tell you this so that we are being completely transparent about the data we collect and what we do with it.
+# How to Clone
+To clone the Silver Camper repository:
 
-**Can I opt out?**
+Log in (or sign up) to GitHub.
+Go to the repository for this project, sarah-welland/Silver-Camper.
+Click on the code button, select whether you would like to clone with HTTPS, SSH or GitHub CLI and copy the link shown.
+Open the terminal in your code editor and change the current working directory to the location you want to use for the cloned directory.
+Type 'git clone' into the terminal and then paste the link you copied in step 3. Press enter.
 
-Yes, you can. Since no personally identifiable information is being captured, we'd appreciate it if you let the script run; however if you are unhappy with the idea, simply run the following commands from the terminal window after creating the workspace, and this will remove the uptime script:
+# Testing
 
-```
-pkill uptime.sh
-rm .vscode/uptime.sh
-```
+## Silver Camper Testing Page
+Chrome Developer Tools and issues can be found below
 
-**Anything more?**
+## W3C Vaildator
+Used to validate HTML on all pages.
 
-Yes! We'd strongly encourage you to look at the source code of the `uptime.sh` file so that you know what it's doing. As future software developers, it will be great practice to see how these shell scripts work.
+Link of Pages Below
+1. [Index Page HTML](https://validator.w3.org/nu/?doc=https%3A%2F%2Fswelland1.github.io%2FSilver-Camper%2Findex.html)
+2. [Gallery Page HTML](https://validator.w3.org/nu/?doc=https%3A%2F%2Fswelland1.github.io%2FSilver-Camper%2Fgallery.html)
+3. [Contact Us Page HTML](https://validator.w3.org/nu/?doc=https%3A%2F%2Fswelland1.github.io%2FSilver-Camper%2Fcontact.html)
+4. [Submit Page HTML](https://validator.w3.org/nu/?doc=https%3A%2F%2Fswelland1.github.io%2FSilver-Camper%2Fsubmit.html%3Ffirst-name%3Dsfds%26last-name%3Dxdfsd%26email%3Dsarahwelland%2540hotmail.com%26message%3Dsdfsdf)
 
----
 
-Happy coding!
+## Solved Bugs
+
+Diagnostic Lighthouse brought up a number of fixes that were needed on the Gallery Page. Some of these I was able to fix other I could not as I do not have the experience or knowledge to fix them.
+
+![lighthouse diagnostic fixes](/css/images/ReadMe%20and%20Testing/lighthouse%20fixes.png)
+
+# Testing User Stories
+
+## First Time Users
+
+* Navigate the site easily
+
+![Navigation Bar](/css/images/ReadMe%20and%20Testing/navigation%20bar.png)
+
+* Find Social Media Links
+
+![Footer Bar](/css/images/ReadMe%20and%20Testing/Screenshot%202024-11-03%20150830.png)
+
+## Returning Visitors
+* Contact Silver Camper
+![Form Page](/css/images/ReadMe%20and%20Testing/Form.png)
+
+## Lighthouse
+[Index Page Link](https://8000-swelland1-silvercamper-u9gjslnsl7s.ws.codeinstitute-ide.net/index.html)
+
+![IMAGE OF PERCENTAGE](/css/images/ReadMe%20and%20Testing/new%20index%20lighthouse.png)
+
+[Gallery Page Link](https://8000-swelland1-silvercamper-u9gjslnsl7s.ws.codeinstitute-ide.net/gallery.html)
+
+![IMAGES OF PERCENTAGE](/css/images/ReadMe%20and%20Testing/lighthouse%20gallerypage.png)
+
+[Contact Us Page Link](https://swelland1.github.io/Silver-Camper/contact.html)
+
+![IMAGES OF PERCENTAGES](/css/images/ReadMe%20and%20Testing/contact%20us%20lighthouse%20page.png)
+
+# Full Testing
+Testing was performed on Chrome and Safari broswers. Each page has also been through Google Chrome Developer Tools to make sure they are responsive.
+
+## Device Testing
+
+Pages were tested on Samsung 8 Phone and Iphone SE to see if they respond to different devices.
+
+![Images of Samsung 8](/css/images/ReadMe%20and%20Testing/samsungs8%20test.png)
+
+![Image of Iphone SE](/css/images/ReadMe%20and%20Testing/iphonese%20test.png)
+
+## Links
+All Links have been tested on the Index Page. Each link works and Social Media links open in a seperate browser.
+All Links have been tested on the Gallery Page. Each link works and Social Media links open in a seperate browser.
+All Links have been tested on the Contact Us Page. Each link works and Social Media links open in a seperate browser.
+All Links have been tested on the Submit Page. Each link works and Social Media links open in a seperate browser.
+
+# Credit
+* Content written by myself for Silver Camper.
+* Images from Upsplash (LINK)
+1. Hero Image Homepage - [Scott Goodwill](https://unsplash.com/photos/orange-camping-tent-near-green-trees-y8Ngwq34_Ak)
+2. Image 1 Gallery - [Ole-Martin Bratteberg](https://unsplash.com/photos/blue-tent-beside-body-of-water-surrounded-by-mountains-during-daytime-hv7F8oPxRAA)
+3. Image 2 - Gallery[Leon Contreras](https://unsplash.com/photos/selective-focus-photography-of-marshmallows-on-fire-pit-YndHL7gQIJE)
+4. Image 3 - Gallery - [Patrick Hendry - Annika's Yuki](https://unsplash.com/photos/woman-and-a-dog-inside-outdoor-tent-near-body-of-water-eDgUyGu93Yw)
+5. Image 4 - Gallery [Wei Pan](https://unsplash.com/photos/brown-tent-under-starry-night-Ta0A1miYZKc)
+6. Image 5 - Gallery [Jimmy Conover](https://unsplash.com/photos/short-coated-brown-dog-J_XuXX9m0KM)
+7. Image 6 - Gallery [Dino Reichmuth](https://unsplash.com/photos/red-and-gray-tents-in-grass-covered-mountain-5Rhl-kSRydQ)
+8. Image 7 - Gallery [Glen Jackson](https://unsplash.com/photos/man-sitting-on-stone-beside-white-camping-tent-mzZVGFfMOkA)
+9. Image 8 - Gallery [Andrew Gloor](https://unsplash.com/photos/tent-at-the-field-near-trees-during-night-I1RZSDvvStY)
+10. Image 9 - Gallery [Daan Weijers](https://unsplash.com/photos/gray-tent-on-top-of-mountain-pSaEMIiUO84)
+11. Image 10 - Gallery [Esther Tuttle](https://unsplash.com/photos/man-and-woman-seating-on-gray-hammock-beside-trees-during-daytime-dyjH3YMblpo)
+12. Image 11 - Gallery [Roxanne Desgagnés](https://unsplash.com/photos/pink-tent-near-white-sand-near-sea-h4bBVo_CpqQ)
+13. Image 12 - Gallery - [Jack Sloop](https://unsplash.com/photos/camping-tent-on-cliff-during-golden-hour-qelGaL2OLyE)
+14. Hero Image Contact Us Page - [Patrick Hendry - Annika's Yuki](https://unsplash.com/photos/woman-and-a-dog-inside-outdoor-tent-near-body-of-water-eDgUyGu93Yw)
+* [Kiera Cudmore](https://github.com/kera-cudmore/readme-examples) READ.ME Examples
+* [W3 Schools](https://www.w3schools.com/) for help with Code issues.
+* Other projects for layout and design inspiration [Kiwi Kampers](https://adamshaw90.github.io/Kiwi-Kampers/index.html) & [Gower Fields](https://smithphil88.github.io/gower-fields/)
+* [Google Developer Tools](https://developer.chrome.com/docs/devtools) for styling and responsiveness.
+* [Over Stack](https://stackoverflow.com/) for help with Git navigation.
