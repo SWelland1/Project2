@@ -1,7 +1,6 @@
 # Higher or Lower?
 
-Higher or Lower is an interactive game requiring users to guess whether the next number will be higher or lower than the previous acorss 5 cards.
-The purpose is to have fun trying to complete all 4 rounds.
+Higher or Lower is an interactive game which consists of 5 cards. The aim of the game is to guess if the number on the next card will be Higher or Lower than the previous Cards number. If you can guess all 4 Cards successfully you complete the game
 
 The site can be accessed from this [link](https://swelland1.github.io/Project2/)
 
@@ -9,29 +8,27 @@ The site can be accessed from this [link](https://swelland1.github.io/Project2/)
 
 ## Overview
 
-The higher or lower game consists of one html page but has three sections that are diplayed at different times as well as a modal to show the game rules:
-- **Start-Section**: displays two buttons so the user can either start the game or learn how to play first.
-- **Game-Section**: displays the game itself.
-- **Results-Section**: section displayed when the user has successfully completed all the rounds.
-- **How-To-Play-Modal**: pop up modal explaining how to play the game when the 'how to play' button is pressed in either the start or game section.
+Higher or Lower consists of 3 sections which link together to control the game;
+- **Start-Section**: Contains 2 buttons the first allowing you to play the game and the second with instructuins on how to play the game.
+- **Game-Section**: Contains the game, buttons and instructions.
+- **Results-Section**: Contains a message to congratulate the user when they complete the game.
+- **How-To-Play-Modal**: Window displaying instructions on 'how to play' the game in both the start and game sections.
 
 ## Technologies Used
 
-- **HTML**: Language used to provide structure of the website.
-- **CSS**: Language used to provide styling and layout to the website.
-- **JavaScript**: Language used to provide interactivity to the website.
-- **Markdown**: Language used to write README.md.
 - **JQuery**: Framework that provides convenient tools to handle events and DOM manipulation.
-- **Bootstrap**: Framework for building responsive pre-desgined layouts and interactive features.
-- **Balsamiq**: Tool for creating wireframes.
-- **Miro**: Tool for workflow creation.
-- **GitPod**: Main tool to write and edit code.
-- **Git**: System for version control.
+- **CSS**: Layout and Styling to the game.
+- **HTML**: Language used to structure and layout game base.
+- **JavaScript**: Interactive element prrovided to the game.
+- **Balsamiq**: Wireframe creation.
+- **Bootstrap**: Pre-designed features for layouts.
+- **Google Fonts**: Library of fonts.
+- **FontAwesome**: Library of icons.
+- **GitHub Pages**: Website Deployment.
 - **GitHub**: Platform that hosts the code of the website.
-- **GitHub Pages**: Service used for website deployment.
-- **Google Chrome Developer Tools**: Tool used for website troubleshooting and testing.
-- **Google Fonts**: Library used for all fonts used.
-- **FontAwesome**: Library used for all icons used.
+- **GitPod**: Tool enabling code to be written and edited.
+- **Google Chrome Developer Tools**: Teating and Troubleshooting.
+
 
 ## User Experience Design
 
@@ -39,25 +36,24 @@ The higher or lower game consists of one html page but has three sections that a
 
 #### User Goals
 
-* To have fun playing a easy to understand and simple game.
+* A simple game that brings fun ti the User playing.
 
 #### Site Owner Goals
 
-* Provide a game that both they and any visiting users can enjoy.
+* A game that is simple that any users can enjoy multiple times.
 
 #### User Stories
 
 ##### First Time Visitor Goals:
 
-* To be able to quickly and easily find the instrustions and rules of the game.
-* To be able to easily and intuitively navigate and play the game.
-* To have prompts throughout the game so I know what to do next.
-* To have visual cues so that I know easily where I was right or wrong.
+* Navigation is easy and playing the game can be done in under 5 pressed buttons.
+* Rules of the game can be found on each page and understood.
+* Visual actions for next move in the game.
 
 ##### Returning and Frequent Visitor Goals:
 
-* To able to start the game quickly and easily.
-* To able to play agin quickly and easily when the game has been won or lost.
+* Playing the game for the first time or multiple times should be easy and quick 
+* Starting a New game should be straightforward 1 button click
 
 ### Scope
 
@@ -65,8 +61,7 @@ The higher or lower game consists of one html page but has three sections that a
 
 ##### General
 
-* The website conisits of one html page with different sections visible at different times to keep the website size smaller and increase loading speed.
-* The website has it's own custom favicon, making the site look more professional and helping the user to find the correct page if they have several tabs open in their browser.
+* A favicon is displayed helping to find the correct page if multiple tabs are open in the browser.
 
 ![Favicon screen shot](images/Favicon.png)
 
@@ -74,19 +69,19 @@ The higher or lower game consists of one html page but has three sections that a
 
 ![Header desktop screen shot](images/Header.png)
 
-* The header is always visible on the webpage to provide consistnecy throughout the game.
-* The header consists of the game title "Higher or Lower ?" 
-* The header is responsive. When on a small screen the title extends over two lines instead of one
+* Header reads 'Higher or Lower?'
+* Visable on every page displayed.
+* When on a smaller screen it moves to two lines rather than one.
 
 ##### Start Section
 
 ![Start section desktop screen shot](images/Start%20Page.png)
 
-* The start section consists of two buttons: 
- - 'Start Game': which takes the user to the game section .
- - 'How To Play': which opens the how to play modal.
-* This gives the user two options: to start playing the game straight away, or to learn how to play the game first.
-* The start sections is compatible with all screen sizes as the button are positioned one on top of the other. They are not too wide to fit inside the width of a mobile device, and are not to too tall or spaced out so they are both visible in the device viewport together.
+* Consists of two buttons: 
+ - 'Start Game': User to the game section .
+ - 'How To Play': Opens window to 'how to play'.
+* Two options are available: Jump straight into playing the game or read the instructions before starting.
+* Responsive with all screen sizes, buttons fit inside the width of mobile devices.
 
 ![Start section mobile screen shot](images/Start%20Page%20Mobile.png)
 
@@ -94,21 +89,21 @@ The higher or lower game consists of one html page but has three sections that a
 
 ![Game section desktop screen shot](images/Game%20Page%20New.png)
 
-* The game section consists of:
+* Consists of:
  - 'How To Play Button"
- - A line of text indicating which round the user is currently on. This is automatically set to one at the start of each game and increases with each successful guess.
- - A line of text inofrming the user the range of numbers that are availble for the cards to hekp them make an informed guess.
- - A line of text that helps guide the user through the game by providing instructions about what they should do next and updates about their progress.
+ - Text indicating the round the user is currently on. With each successfull guess the round number increases automatically.
+ - Text informing the User the range of numbers available.
+ - Text helping User move through the game providing instructions and updates of their progress.
  - Five boxes which are the 'cards' used for playing the game. 
- - A higher and a lower button that allow the user to make their guess.
- - A reset button that allows the user to reset the game at any point during the game
+ - 2 buttons Higher or Lower allowing Users to submit their guess.
+ - Reset button that allows the user to reset the game.
 
-* Initally only the first card has a number shown, the others are all marked with a '?', and the numbers get revealled one by one as the user makes guesses, adn the background turns from blue to either green or red to indicate to the user whether their guess was correct or incorrect.
-* All buttons have a hover effect to ensure the user knows that they are interactive and clickable. However, the higher and lower buttons are diabled and the hover effect removed when the user guesses incorrectly, to show that the game is over.
+* At the start of the game only the first card has a number shown, the other four cards habe '?' displayed. As Users make a guess the card reveals the number, the car will turn either green or red depending if the guess is correct or not.
+* Buttons have a hoover effect allowing User visually to see that the button is active. If the User guess wrong the hoover and button is disabled.
 
 ![Game play screen shot](images/Game%20Lost%20(2).png)
 
- * The game section is responsive as the cards move to form three lines inside of one when on a mobile device.
+ * When on a mobile device the cards move to fit the device.
 
 ![Game section mobile screen shot](images/Game%20Page%20Mobile%20New.png)
 
@@ -116,23 +111,23 @@ The higher or lower game consists of one html page but has three sections that a
 
 ![Results section desktop screen shot](images/Results%20Page.png)
 
-* The results section consists of:
- - A line of text congratulating the user on completeing the game.
- - A 'Play Again' button that takes the play back to the game section and restarts the game for them to play again.
+* Consists of:
+ - Message congratulation user on completing the game.
+ - If User wants to play again, by clicking the 'Play Again' button it takes you back to the game section.
 
-* The results section is compatible with all screen sizes as the text and button adjusts to all screen sizes.
+* Results section is compatible with all screen sizes,the text and button adjusts to all screen sizes.
 
 ##### How To Play Modal
 
 ![How to play modal desktop screen shot](images/How%20To%20Play%20Instructions%201.png) [Continued](images/How%20To%20Play%20Instructions%202.png)
 
-* The How To Play' modal provides the rules and objectives of the game without taking the user away from the screen they are currrently on, so they do not have to restart the game if they are in the middle of playing. 
+* The How To Play' window, allows goal aim and instructions to be seen without leaving the screen currently displayed. 
 * The 'How To Play' modal consists of:
- - A modal header containing the modal title 'Higher or Lower ?', which is the same as the title of the webpage for continuity, and an 'x' button so the user can exit the modal from the top of the modal.
- - The 'Objective' section that outlines the objective of the game.
- - The 'Game Set Up' section that outlines inital state of the gaem before the user starts playing.
- - The 'How To Play' section which details how the player may progress through the game.
- - The winning and losing conditions of the game which outlines how the user wins and loses the game.
+ - A modal header containing the modal title 'Higher or Lower ?', the same as displayed on website pages, an 'x' button so the user can close the modal from the top of the modal, rather than scrolling all the way to the bottom.
+ - 'Game Aim' outlines the objective of the game.
+ - 'Game Layout' outlines the game before play starts.
+ - 'How To Play' instructs the player how to make progress through the game.
+ - The winning and losing conditions explains to the User what happens if you win or lose.
  - A modal footer containing a 'close' button so the user can exit the modal from the bottom of the modal.
 
 ![How to play modal mobile screen shot](images/h2p%20mobile1.png)
@@ -143,10 +138,10 @@ The higher or lower game consists of one html page but has three sections that a
 
 ![Reset game modal desktop screen shot](images/Lost%20Game%20Window.png)
 
-* The reset game modal is to double check that the user understands what happens when they reset the game to ensure that they don't lose their progress if that wasn't what they intended to do.
-* The 'Reset Game' modal consists of:
- - A modal header asking the user if they are sure about reseting the game, and an 'x' button so the user can exit the modal and return to their game from the top of the modal.
- - A line of text in the modal boday informing the user that all their progress will be lost if they reset the game.
+* There is a message that double checks with the User that they are sure they want to restart the game.
+* Consists of:
+ - Header asking User if they ar esure they want to restart the game, also an 'x' button so the user can exit the modal and return to their game from the top of the modal.
+ - Text informing the User if they exit all guesses will be lost.
  - A modal footer with a 'close' button, so the user can close the modal and return to their game from the bottom of the modal, and a 'reset game' button so the user can continue and reset the game if that is what they wish to do.
 
  
@@ -168,28 +163,23 @@ The higher or lower game consists of one html page but has three sections that a
 
 ![Color pallet](images/Coolars%20Pallete.png)
 
-- The main theme colours were Argentinian Blue (#35A7FF) and Carrot Orange (#F39237) to create a loud and bright colour scheme to make the game look exciting and engaging to the user.
+- The main theme colours were Black (#000) and Carrot Orange (#F39237) creating an inviting environment to play the game.
 - Dark Blue (#1F01B9) was then used as border for each card to clearly define each card.
-- Sky Blue (#87CEEB) was used initally as the background for each card to make the cards easily readable and as a neutral colour before they were truned Lime Green or Red so the user can quickly and easily tell if they were right or wrong as green is typically associated with correct and red with incorrect.
+- Sky Blue (#87CEEB) was used initally as the background for each card as a constrast to the Black backgorund, making it easily readable. The cards then turn Green or Red so the user can quickly and easily tell if they were right or wrong as green is correct and red with incorrect.
 
 #### Typography
 
 ![New Amsterdam Font](images/New%20Amsterdam%20Font.png)
 
-- Google font's 'New Amsterdam' was used for the headings and buttons as the block capitals look similar to the fonts used in retro games, making the website look instantly like a game so the user may quickly have a sense of the webpage's purpose.
+- Google font's 'New Amsterdam'.
 
 ![Nunito Font](images/Nunito%20Font.png)
-
-- Google font's 'Nunito' was used for any instructional text as the spacing and clarity of the letters makes the text easy to read and therefore will help the user understand any information easily.
 
 ## Testing
 
 ### Validation
 
 * [HTML Validator](https://validator.w3.org/) was run the page to determine any HTML errors.
-The only error found was a warning that there wasn't a heading element as the direct child of a section for the start and game sections.
-However, there are cases where this is acceptable, paticularly in the case of links or buttons.
-More information can be found [here](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/section)
 
 ![html validation](images/W3C%20vaildator.png)
 
@@ -197,19 +187,19 @@ More information can be found [here](https://developer.mozilla.org/en-US/docs/We
 
 ![css validation](images/css%20style%20validator.png)
 
-* Lighthouse in Chrome Developer Tools was used to check performance.
+* Lighthouse in Chrome Developer Tools was used for performance.
 
 ![lighthouse report](images/Start%20Page%20Lighthouse%20tresting.png)
 
-* [JSHint](https://jshint.com/) was run on the JavaScript code and there were no errors found.
+* [JSHint](https://jshint.com/) for Javascript errors were found but didnt seem to impace the running of the code.
 
 ![JSHint validation](images/JS%20Validator.png)
 
 ### Compatibility and Responsiveness
 
-The website was tested on Chrome, Mozilla, Edge and Safari browsers with no problems found.
+The website was tested on Chrome, Edge and Safari browsers with no problems found.
 
-The website was tested on numerous sized screens including different desktop, tablet and mobile devices and was found to respond as expected to all sizes.
+All size devices were testing to check responsiveness.
 
 ![Start section responsive](/images/I%20Phone%2012%20Pro%20Size.png) 
 ![Ipad Mini](images/IPad%20Mini%20Size.png)
@@ -220,31 +210,29 @@ The website was tested on numerous sized screens including different desktop, ta
 ![Reset game modal responsive](images/results%20i%20pad%20mini.png)
 ![Reset Game Mobile](images/Reset%20Page%20Mobile%20Size.png)
 
-Chrome developer tools was used throughout the design process to check responsiveness and breakpoints. Adjustments were made accordingly.
+Chrome developer tools was used whist design was implemented adjustments were made as errors were found.
 
 ### Manual Testing
 
 | Feature | Action | Expected Result | Tested | Passed | Comments |
 | --- | --- | --- | --- | --- | --- |
-| Footer | | | | | |
-| Github icon and username in the footer | Click on the Github icon and username | The user is redirected to my GitHub page | Yes | Yes | - |
-| Hover effect | Hover over footer element | The icon changes colour | Yes | Yes | - |
+| 
 | Start Section | | | | | |
-| "Start Game" button | Click on the "Start Game" button | The user is redirected to the Game section | Yes | Yes | - |
+| "Start Game" button | Click on the "Start Game" button | User redirected to the Game section | Yes | Yes | - |
 | "How To Play" button | Click on the "How To Play" button | The "How To Play" modal appears | Yes | Yes | - |
 | Hover effect | Hover over buttons | The icon changes colour | Yes | Yes | - |
 | Game Section | | | | | |
 | "How To Play" button | Click on the "How To Play" button | The "How To Play" modal appears | Yes | Yes | - |
 | "Reset Game" button | Click on the "Reset Game" button | The "Reset Game" modal appears | Yes | Yes | - |
-| "Higher" button | Click on the "Higher" button | Registers the user guess as "higher" | Yes | Yes | - |
-| "Lower" button | Click on the "Lower" button | Registers the user guess as "lower" | Yes | Yes | - |
+| "Higher" button | Click on the "Higher" button | User guess as "higher" | Yes | Yes | - |
+| "Lower" button | Click on the "Lower" button | User guess as "lower" | Yes | Yes | - |
 | Round number | User guesses correctly | The round number increases by 1 | Yes | Yes | - |
-| Number is revealed | Click "Higher" or "Lower" buttons | Card content changes from '?' to it's value | Yes | Yes | - |
-| Card changes colour | Click "Higher" or "Lower" buttons | Card background changes green or red depedning if user guessed correctly or incorrectly | Yes | Yes | - |
-| Instruction Box | Click "Higher" or "Lower" buttons | The text changes to help direct the user to their next action | Yes | Yes | - |
-| Results Section | Win all the rounds | The user is redirected to the results section | Yes | Yes | - |
+| Number is revealed | Click "Higher" or "Lower" buttons | Card content changes from '?' to a value | Yes | Yes | - |
+| Card changes colour | Click "Higher" or "Lower" buttons | Card background changes green or red depedning if users is correct or incorrect | Yes | Yes | - |
+| Instruction Box | Click "Higher" or "Lower" buttons | Text changes directing user to their next action | Yes | Yes | - |
+| Results Section | Win all the rounds | User is redirected to results section | Yes | Yes | - |
 | Results Section | | | | | |
-| "Play Again" button | Click on the "Play Again" button | The user is redirected to the game section | Yes | Yes | - |
+| "Play Again" button | Click on the "Play Again" button | User is redirected to the game section | Yes | Yes | - |
 | How To Play Modal | | | | | |
 | "X" button | Click on the "X" button | The modal is closed | Yes | Yes | - |
 | "Close" button | Click on the "Close" button | The modal is closed | Yes | Yes | - |
