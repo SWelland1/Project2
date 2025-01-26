@@ -1,4 +1,4 @@
-// The Game Object
+// Game
 let game = {
     cards: [],
     round: 0,
@@ -8,31 +8,42 @@ let game = {
 };
 
 /**
- * Wait for the DOM to finish loading before running the game
- * Get the button elements and add event listeners to them
- */
+ * Game runs once DOM has finished loading
+ * Event Listners and Button Elements Added
+ * */
+
 $(document).ready(function () {
-    //Displays game page and starts a new game when start game button clicked
+    
+// When Start Game button pressed Game Page starts a new game
+
     $('#start-game-button').click(function () {
         $('#start-page').addClass('hide');
         $('#game-page').removeClass('hide');
         newGame();
     });
-    //Restarts the game when the reset game button in the modal is clicked
+    
+//When Reset Game button is pressed new game restarts
+
     $('#modal-reset-game-button').click(function () {
         newGame();
     });
-    //Submits the user guess as higher when the higher button is clicked
+
+//When Higher or Lower button is pressed guess is submitted for the User
+
     $('#higher-button').click(function () {
         checkRound();
         checkGuess("higher");
     });
-    //Submits the user guess as lower when the higher button is clicked
+
+//Lower guess is submitted for the User when Lower button is pressed
+
     $('#lower-button').click(function () {
         checkRound();
         checkGuess("lower");
     });
-    //Displays the game page and starts a new game when play again button is clicked
+
+//When Play Again button is pressed on the game page a new game starts
+
     $('#play-again-button').click(function () {
         $('#results-page').addClass('hide');
         $('#game-page').removeClass('hide');
@@ -41,122 +52,153 @@ $(document).ready(function () {
 });
 
 /**
- * The main game "loop", called when the 'start game' button is pressed
- * and after the 'reset game' and 'play again' buttons have been pressed
+ * When 'Start Game' and after 'Reset Game' and 'Play Again' button is pressed 'loop' in main game starts
  */
-function newGame() {
-    //set the key value pairs of the game object to their inital values
+
+    function newGame() {
+    
+//Initial values set
+
     game.cards = [];
     game.round = 0;
     game.gameStatus = "active";
-    //give starting instruction to the user and ensure higher and lower buttons are enabled
+
+//Higher and Lower buttons active and instructions available for User
+
     $('#results-box').text('Press Higher or Lower to submit your guess!');
     $("#higher-button").removeAttr("disabled", "disabled").addClass("game-button-hover");
     $("#lower-button").removeAttr("disabled", "disabled").addClass("game-button-hover");
-    //set all the cards to the value of ?
+    
+//Cards set to ?
+
     for (let i = 1; i < 5; i++) {
         $(`#card-${i}`).text("?").css('background-color', '#78ceeb');
     }
-    //generate 5 random numbers between 0 and 20, avoiding duplicates, adding them to the cards array 
+
+//Cards added to array, no duplicates and 5 random numbers generated between 0 and 20
+
     while (game.cards.length < 5) {
         let card = ((Math.floor(Math.random() * 16)));
         if (!game.cards.includes(card)) {
             game.cards.push(card);
         }
     }
-    //set the value of the first card to the value of first number in the game cards array
+
+//1st card in array value set
+
     $('#card-0').text(game.cards[0]);
     increaseRound();
 }
 
 /**
- * Gets the current round number from the DOM and increases it by one 
+ * Round number increases by one from DOM 
  */
-function increaseRound() {
-    game.round++;
+
+    function increaseRound() {
+        game.round++;
     $("#round-number").text(game.round);
 }
 
 /**
- * Checks the round and assigns the current and previous cards that need to be compared accordingly
+ * Current and previous cards checked and comapred. Round number checked
  */
-function checkRound() {
-    switch (game.round) {
-        case 1:
-            game.currentCard = game.cards[1];
-            game.previousCard = game.cards[0];
-            break;
-        case 2:
-            game.currentCard = game.cards[2];
-            game.previousCard = game.cards[1];
-            break;
-        case 3:
-            game.currentCard = game.cards[3];
-            game.previousCard = game.cards[2];
-            break;
-        case 4:
-            game.currentCard = game.cards[4];
-            game.previousCard = game.cards[3];
-            break;
+
+    function checkRound() {
+        switch (game.round) {
+            case 1:
+                game.currentCard = game.cards[1];
+                game.previousCard = game.cards[0];
+                    break;
+            case 2:
+                game.currentCard = game.cards[2];
+                game.previousCard = game.cards[1];
+                    break;
+            case 3:
+                game.currentCard = game.cards[3];
+                game.previousCard = game.cards[2];
+                    break;
+            case 4:
+                game.currentCard = game.cards[4];
+                game.previousCard = game.cards[3];
+                     break;
     }
 }
 
 /**
- * Checks whether the user guessed correctly
+ * Did User guess correctly
  */
-function checkGuess(userGuess) {
-    //decides whether the user is able to make a guess or not, depending on if the game is active or inactive
+
+    function checkGuess(userGuess) {
+        
+//Acive or inactive game, establishes if User can make a guess
+
     if (game.gameStatus === 'active') {
-        //activates different code depending on whether the user guessed higher or lower 
-        if (userGuess === 'higher') {
-            //checks if the current card is greater than the previous card and therefore if the player was right or wrong
-            if (game.currentCard > game.previousCard) {
-                //checks the round number to decide whether the player is moving to the next round or has completed the game
-                if (game.round < 4) {
-                    //changes the card to green and lets you know you completed the round and increases the round number to show the start of the next round
-                    $("#results-box").text(`Correct! Round ${game.round} complete, guess again!`);
-                    $(`#card-${game.round}`).text(game.currentCard).css('background-color', 'limegreen');
-                    increaseRound();
+
+//If guess is Higher or Lower different code generated and activated
+
+    if (userGuess === 'higher') {
+            
+//Player guess correct or incorrect depending if current card is greater than previous
+
+    if (game.currentCard > game.previousCard) {
+
+//Round number checked to see if User has completed the game or can move onto next round
+
+    if (game.round < 4) {
+                    
+//Start of next round, round number increases and card changes to green
+                    
+    $("#results-box").text(`Correct! Round ${game.round} complete, guess again!`);
+        $(`#card-${game.round}`).text(game.currentCard).css('background-color', 'green');
+            increaseRound();
                 } else if (game.round === 4) {
-                    //takes the user to the results pages congratulating them
-                    $('#results-page').removeClass('hide');
-                    $('#game-page').addClass('hide');
-                } else {
-                    $("#results-box").text("Invalid Round Press Reset Game");
-                }
+
+//User moves to Results Page shown congratulation message
+
+    $('#results-page').removeClass('hide');
+    $('#game-page').addClass('hide');
             } else {
-                /*changes the card to red and tells the user their guess was incorrect, changes the game status to inactive 
-                to prevent further guess and disables the higher and lower buttons*/
-                $("#results-box").text("Incorrect! Press the 'Reset Game' to play again!");
-                $(`#card-${game.round}`).text(game.currentCard).css('background-color', 'red');
-                game.gameStatus = "inactive";
-                $("#higher-button").attr("disabled", "disabled").removeClass("game-button-hover");
-                $("#lower-button").attr("disabled", "disabled").removeClass("game-button-hover");
+                $("#results-box").text("Invalid Round Press Reset Game");
+                    }
+            } else {
+/*Game status inactive, Higher and Lower buttons disabled. User told guess incorrect and card changes to red*/
+    $("#results-box").text("Incorrect! Press the 'Reset Game' to play again!");
+    $(`#card-${game.round}`).text(game.currentCard).css('background-color', 'red');
+        game.gameStatus = "inactive";
+    $("#higher-button").attr("disabled", "disabled").removeClass("game-button-hover");
+    $("#lower-button").attr("disabled", "disabled").removeClass("game-button-hover");
             }
         } else if (userGuess === 'lower') {
-            //checks if the current card is less than the previous card and therefore if the player was right or wrong
-            if (game.currentCard < game.previousCard) {
-                //checks the round number to decide whether the player is moving to the next round or has completed the game
-                if (game.round < 4) {
-                    //changes the card to green and lets you know you completed the round and increases the round number to show the start of the next round
-                    $("#results-box").text(`Correct! Round ${game.round} complete, guess again!`);
-                    $(`#card-${game.round}`).text(game.currentCard).css('background-color', 'limegreen');
-                    increaseRound();
-                } else if (game.round === 4) {
-                    //takes the user to the results pages congratulating them
-                    $('#results-page').removeClass('hide');
-                    $('#game-page').addClass('hide');
-                } else {
+            
+//Is current card less than previous was the player correct or incorrect
+
+        if (game.currentCard < game.previousCard) {
+                
+//Round number checked to see if User has completed the game or can move onto next round
+        if (game.round < 4) {
+
+//Round number increases User shown message round completed, card changes to green
+
+    $("#results-box").text(`Correct! Round ${game.round} complete, guess again!`);
+    $(`#card-${game.round}`).text(game.currentCard).css('background-color', 'limegreen');
+        increaseRound();
+            } else if (game.round === 4) {
+                    
+//User moves to Results Page and shown congratulations message
+
+    $('#results-page').removeClass('hide');
+    $('#game-page').addClass('hide');
+             } else {
                     $("#results-box").text("Invalid Round Press Reset Game");
                 }
             } else {
-                //changes the card to red and tells the user their guess was incorrect, changes the game status to inactive 
-                /*to prevent further guess and disables the higher and lower buttons*/
-                $("#results-box").text("Incorrect! Press the 'Reset Game' to play again!");
-                $(`#card-${game.round}`).text(game.currentCard).css('background-color', 'red');
-                game.gameStatus = "inactive";
-                $("#higher-button").attr("disabled", "disabled").removeClass("game-button-hover");
-                $("#lower-button").attr("disabled", "disabled").removeClass("game-button-hover");
+//Higher and Lower buttons disabled, User told guess was incorrect and card changes to red*/
+
+    $("#results-box").text("Incorrect! Press the 'Reset Game' to play again!");
+    $(`#card-${game.round}`).text(game.currentCard).css('background-color', 'red');
+        game.gameStatus = "inactive";
+            $("#higher-button").attr("disabled", "disabled").removeClass("game-button-hover");
+            $("#lower-button").attr("disabled", "disabled").removeClass("game-button-hover");
             }
         } else {
             $("#results-box").text("Select either the higher or lower button to submit your guess");
