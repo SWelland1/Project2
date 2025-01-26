@@ -33,17 +33,18 @@ h1 {
 h2 {
     font-family: Nunito, sans-serif;
     text-transform: uppercase;
+    color: black;
 }
 
-p,
-li,
-#results-box,
-#round-box, {
+p, li {
     font-family: Nunito, sans-serif;
     font-size: 1.25rem;
     margin: 0 auto;
+    color: black;
 }
 
+#results-box, 
+#round-box, 
 #scale-box {
     font-family: Nunito, sans-serif;
     font-size: 1.25rem;
