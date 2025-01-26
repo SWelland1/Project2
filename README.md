@@ -92,7 +92,7 @@ The higher or lower game consists of one html page but has three sections that a
 
 ##### Game Section
 
-![Game section desktop screen shot](images/Game%20Open1.png)
+![Game section desktop screen shot](images/Game%20Page%20New.png)
 
 * The game section consists of:
  - 'How To Play Button"
@@ -110,7 +110,7 @@ The higher or lower game consists of one html page but has three sections that a
 
  * The game section is responsive as the cards move to form three lines inside of one when on a mobile device.
 
-![Game section mobile screen shot](images/Game%20Page.png)
+![Game section mobile screen shot](images/Game%20Page%20Mobile%20New.png)
 
 ##### Results Section
 
